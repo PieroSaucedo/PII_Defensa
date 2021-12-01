@@ -45,6 +45,12 @@ namespace Ucu.Poo.Defense
             return item;
         }
 
+        public OfferItem AddDiscount(Residue residue, int quantity, int discount)
+        {
+            OfferItem item = new OfferItem(residue, quantity, discount);
+            return item;
+        }
+
         public void RemoveItem(OfferItem item)
         {
             this.items.Remove(item);
