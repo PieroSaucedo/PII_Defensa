@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace Ucu.Poo.Defense
 {
     public class Residue
