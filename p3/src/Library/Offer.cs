@@ -9,6 +9,8 @@ namespace Ucu.Poo.Defense
     {
         public DateTime EndDate { get; set; }
 
+        public int Total { get; set; }
+
         public IReadOnlyCollection<OfferItem> Items
         {
             get
@@ -27,8 +29,17 @@ namespace Ucu.Poo.Defense
         public void AddItem(OfferItem item)
         {
             this.items.Add(item);
+            this.Total += (item.Price*item.Quantity);
         }
 
+        
+        /*
+        public void Total(OfferItem item)
+        {
+            this.Total += (item.Price*item.Quantity);
+        }
+        */
+        
         public void RemoveItem(OfferItem item)
         {
             this.items.Remove(item);
